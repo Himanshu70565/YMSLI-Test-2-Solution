@@ -12,7 +12,7 @@ public class Main {
 		CustomerService customerApp=new CustomerServiceImpl();
 		customerApp.addCustomer(c1);
 		
-		customerApp.findCustomerById(1);
-		
+		Customer customer=customerApp.findCustomerById(1);
+		System.out.println(customer);
 	}
 }
