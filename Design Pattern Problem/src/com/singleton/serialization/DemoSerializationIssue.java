@@ -16,7 +16,9 @@ class Singleton implements Serializable{
 
 	public static synchronized Singleton getSingletonObject() {
 		if (singleton == null) {
-			singleton = new Singleton();
+			if(singleton==null) {
+				singleton = new Singleton();
+			}
 		}
 		return singleton;
 	}

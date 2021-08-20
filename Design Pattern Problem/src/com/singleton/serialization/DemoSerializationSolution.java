@@ -10,7 +10,9 @@ class SingletonSerializale implements Serializable{
 
 	public static synchronized SingletonSerializale getSingleton() {
 		if (singleton == null) {
-			singleton = new SingletonSerializale();
+			if(singleton==null) {
+				singleton = new SingletonSerializale();
+			}
 		}
 		return singleton;
 	}
